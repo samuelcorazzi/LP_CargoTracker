@@ -90,6 +90,33 @@ main p {
   margin-top: 2rem;
 }
 
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  text-align: center;
+}
+
+.card h2 {
+  color: #005f73;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos específicos (opcional) */
+.monitoramento {
+  border-top: 4px solid #219ebc;
+}
+
+.seguranca {
+  border-top: 4px solid #ffb703;
+}
+
+.suporte {
+  border-top: 4px solid #fb8500;
+}
+
 section {
   background-color: white;
   padding: 1.5rem;
