@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset e Fonte Padrão */
 * {
   margin: 0;
   padding: 0;
@@ -6,45 +6,129 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+main {
+  padding: 2rem;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefae0;
+  padding: 4rem 3rem;
+  border-radius: 12px;
+  min-height: 500px;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-text h2 {
+  font-size: 2.5rem;
+  color: #005f73;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.intro-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Seção inferior com ícones */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #023047;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.feature .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Corpo da Página */
 body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
 
-/* Header com layout flexível */
+/* Cabeçalho */
 header {
   background-color: #005f73;
   color: white;
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+}
+
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.header-left p {
+  text-align: left;
+}
+
+.header-left button {
+  align-self: flex-start;
 }
 
 header h1 {
   font-size: 2rem;
 }
 
-#links_header {
-  display: flex;
-  gap: 1.5rem;
-}
-
-#links_header a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-/* Texto e botão centralizados */
 header p {
   max-width: 600px;
-  margin: 1rem auto;
-  text-align: center;
-  align-self: center;
+  text-align: left;
+  align-self: flex-start;
 }
 
 header button {
@@ -56,14 +140,28 @@ header button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  align-self: center;
+  align-self: flex-start;
 }
 
 header button:hover {
   background-color: #e9d8a6;
 }
 
-/* Conteúdo principal */
+/* Links do Menu */
+#links_header {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+#links_header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Conteúdo Principal */
 main {
   padding: 2rem 1rem;
   max-width: 1000px;
@@ -81,7 +179,7 @@ main p {
   margin-bottom: 2rem;
 }
 
-/* Cards lado a lado */
+/* Cards */
 .cards {
   display: flex;
   justify-content: center;
@@ -90,7 +188,8 @@ main p {
   margin-top: 2rem;
 }
 
-.card {
+.card,
+section {
   background-color: white;
   padding: 1.5rem;
   border-radius: 8px;
@@ -99,12 +198,13 @@ main p {
   text-align: center;
 }
 
-.card h2 {
+.card h2,
+section h2 {
   color: #005f73;
   margin-bottom: 0.5rem;
 }
 
-/* Estilos específicos (opcional) */
+/* Cores das Categorias */
 .monitoramento {
   border-top: 4px solid #219ebc;
 }
@@ -115,20 +215,6 @@ main p {
 
 .suporte {
   border-top: 4px solid #fb8500;
-}
-
-section {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 280px;
-  text-align: center;
-}
-
-section h2 {
-  color: #005f73;
-  margin-bottom: 0.5rem;
 }
 
 /* Rodapé */
