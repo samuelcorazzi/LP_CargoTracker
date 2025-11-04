@@ -148,36 +148,18 @@ footer {
   color: #fefae0;
   padding: 2rem 1.5rem;
   font-size: 0.95rem;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
   gap: 2rem;
   max-width: 1000px;
   margin: auto;
-}
-
-.footer-left .logo-box {
-  background-color: #fefae0;
-  color: #001f2d;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  width: 120px;
-}
-
-.logo-initials {
-  font-size: 2rem;
-  font-weight: bold;
-  display: block;
-}
-
-.logo-text {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
 }
 
 .footer-right h3 {
