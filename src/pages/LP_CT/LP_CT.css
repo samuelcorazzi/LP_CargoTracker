@@ -147,12 +147,6 @@ main {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.section-divider {
-  height: 60px;
-  background: linear-gradient(to right, #1e3a5f, #005f73);
-  margin: 2rem 0;
-}
-
 .features {
   background-color: #e0f7fa;
   padding: 4rem 3rem;
