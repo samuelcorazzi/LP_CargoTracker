@@ -1,29 +1,32 @@
+/* * seletor universal */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box; /* Altera o modelo de layout*/
+  font-family: 'Jeju Gothic', sans-serif;
 }
 
+/* corpo principal do cod */
 body {
   background-color: #f4f4f4;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.6; /* Define o espaço vertical entre as linhas de texto */
 }
 
+/* cabeçalho do cod */
 header {
-  background-image: url("img/pexels-tomfisk-3856440.jpg");
-  background-size: cover;
+  background-image: url("img/pexels-tomfisk-3856440.jpg"); /* imagem de fundo do header */
+  background-size: cover; /* usado para cobrir todo o espaço do header */
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; /* impede que a img se repita */
   height: 912px;
   padding: 2rem;
   padding-top: 1rem;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  position: relative;
+  justify-content: space-between; /* distriu os elementos horizontalmente e deixa um espaço entre eles */
+  align-items: flex-start; /* alinha os itens */
+  flex-wrap: wrap; /* quebra de linha */
+  position: relative; /* Define que o header pode servir de referência */
   box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
 }
 
@@ -41,7 +44,7 @@ header h1 {
   color: #1e3a5f;
 }
 
-.header-left {
+.header_sup_esquerdo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -49,7 +52,7 @@ header h1 {
   gap: 1rem;
 }
 
-.header-left p {
+.header_sup_esquerdo p {
   color: #ffffff;
   font-size: 1rem;
   margin-top: 2.5rem;
@@ -94,7 +97,7 @@ main {
   margin: auto;
 }
 
-.intro {
+.introdução {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,19 +109,19 @@ main {
   border-bottom: 4px solid #ccc;
 }
 
-.intro-text {
+.intro_texto {
   flex: 1;
   min-width: 300px;
 }
 
-.intro h2 {
+.introdução h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #005f73;
   margin-bottom: 2rem;
 }
 
-.intro-content {
+.intro_conteudo {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -126,13 +129,13 @@ main {
   align-items: center;
 }
 
-.intro-text p {
+.intro_texto p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #333;
 }
 
-.intro-image {
+.intro_imagem {
   flex: 1;
   min-width: 300px;
   display: flex;
@@ -140,7 +143,7 @@ main {
   align-items: center;
 }
 
-.intro-image img {
+.intro_imagem img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -167,7 +170,7 @@ main {
   vertical-align: top;
 } 
 
-.icon {
+.icone {
   background-color: #ffffff;
   color: white;
   font-size: 2rem;
@@ -210,32 +213,32 @@ footer {
   margin: auto;
 }
 
-.footer-right h3 {
+.footer_contatos h3 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   color: #94d2bd;
 }
 
-.footer-right a {
+.footer_contatos a {
   color: #fefae0;
   text-decoration: none;
 }
 
-.footer-right a:hover {
+.footer_contatos a:hover {
   text-decoration: underline;
 }
 
-.footer-bottom {
+.footer-botão {
   margin-top: 2rem;
 }
 
-.footer-bottom a {
+.footer-botão a {
   margin: 0 1rem;
   color: #94d2bd;
   text-decoration: none;
   font-weight: bold;
 }
 
-.footer-bottom a:hover {
+.footer-botão a:hover {
   text-decoration: underline;
 }
