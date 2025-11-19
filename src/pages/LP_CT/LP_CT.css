@@ -351,3 +351,36 @@ footer {
     font-size: 0.9rem;
   }
 }
+ .carrossel-section {
+  width: 100%;
+  height: 500px;          /* você pode mudar a altura */
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.carrossel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carrossel-imagens {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carrossel-imagens .item {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.carrossel-imagens .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
