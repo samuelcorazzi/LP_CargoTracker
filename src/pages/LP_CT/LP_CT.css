@@ -6,6 +6,12 @@
   font-family: 'Jeju Gothic', sans-serif;
 }
 
+.icon-user {
+    width: 32px;   /* tamanho da largura */
+    height: 32px;  /* mantém o ícone quadrado */
+    cursor: pointer; 
+}
+
 /* corpo principal do cod */
 body {
   background-color: #f4f4f4;

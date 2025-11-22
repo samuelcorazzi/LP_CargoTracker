@@ -1,0 +1,95 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* fundo com bege suave */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F2E9DC; /* Bege */
+}
+
+/* caixa do login/cadastro */
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    width: 340px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* título com azul escuro */
+.container h2 {
+    margin-bottom: 25px;
+    color: #1E3A5F; /* Azul Escuro */
+}
+
+/* labels */
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #1E3A5F; /* Azul Escuro */
+}
+
+/* inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #A3D2F4; /* Azul Céu */
+    transition: .2s;
+}
+
+input:focus {
+    border-color: #3B82B3; /* Azul Claro */
+    outline: none;
+}
+
+/* botão principal */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #3B82B3; /* Azul Claro */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* hover mais escuro */
+button:hover {
+    background: #1E3A5F; /* Azul Escuro */
+}
+
+/* link inferior */
+.link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #3B82B3; /* Azul Claro */
+    text-decoration: none;
+    transition: .2s;
+}
+
+.link:hover {
+    color: #1E3A5F; /* Azul Escuro */
+}
+
+/* botão alternativo em verde (se quiser usar) */
+.btn-verde {
+    background: #5EC5A6; /* Verde */
+}
+
+.btn-verde:hover {
+    background: #3B82B3; /* Azul Claro */
+}

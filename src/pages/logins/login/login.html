@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
-    
+
+    <div class="container">
+        <h2>Faça seu login</h2>
+
+        <form action="/login" method="POST">
+            <label>Usuário:</label>
+            <input type="text" name="usuario" required>
+
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <a href="/src/pages/logins/cadastro/cadastro.html" class="link">Criar uma conta</a>
+    </div>
+
 </body>
+
 </html>
