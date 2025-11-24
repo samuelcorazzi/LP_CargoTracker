@@ -1,0 +1,349 @@
+/* * seletor universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Altera o modelo de layout*/
+  font-family: 'Jeju Gothic', sans-serif;
+}
+
+.icon-user {
+  width: 32px;
+  /* tamanho da largura */
+  height: 32px;
+  /* mantém o ícone quadrado */
+  cursor: pointer;
+}
+
+/* corpo principal do cod */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  /* Define o espaço vertical entre as linhas de texto */
+}
+
+/* cabeçalho do cod */
+header {
+  background-image: url("img/pexels-tomfisk-3856440.jpg");
+  /* imagem de fundo do header */
+  background-size: cover;
+  /* usado para cobrir todo o espaço do header */
+  background-position: center;
+  background-repeat: no-repeat;
+  /* impede que a img se repita */
+  height: 912px;
+  padding: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* distriu os elementos horizontalmente e deixa um espaço entre eles */
+  align-items: flex-start;
+  /* alinha os itens */
+  flex-wrap: wrap;
+  /* quebra de linha */
+  position: relative;
+  /* Define que o header pode servir de referência */
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+header h1 {
+  font-size: 60px;
+  color: #1e3a5f;
+}
+
+.header_sup_esquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 440px;
+  gap: 1rem;
+}
+
+.header_sup_esquerdo p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 2.5rem;
+}
+
+header button {
+  background-color: #1e3a5f;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header button:hover {
+  background-color: #16314a;
+}
+
+#links_header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#links_header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#links_header a:hover {
+  color: #1e3a5f;
+}
+
+main {
+  padding: 2rem 1rem;
+  margin: auto;
+}
+
+.introdução {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefae0;
+  padding: 4rem 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  border-bottom: 4px solid #ccc;
+}
+
+.intro_texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.introdução h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #005f73;
+  margin-bottom: 2rem;
+}
+
+.intro_conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro_texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.intro_imagem {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro_imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.features {
+  background-color: #1E3A5F;
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #00b4d8;
+}
+
+.feature {
+  display: inline-block;
+  width: 250px;
+  margin: 0 1rem;
+  vertical-align: top;
+}
+
+.icone {
+  background-color: #ffffff;
+  color: white;
+  font-size: 2rem;
+  padding: 1.8rem;
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #90e0ef;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #e0fbfc;
+}
+
+footer {
+  background-color: #001f2d;
+  color: #fefae0;
+  padding: 2rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer_contatos h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #94d2bd;
+}
+
+.footer_contatos a {
+  color: #fefae0;
+  text-decoration: none;
+}
+
+.footer_contatos a:hover {
+  text-decoration: underline;
+}
+
+.footer-botão {
+  margin-top: 2rem;
+}
+
+.footer-botão a {
+  margin: 0 1rem;
+  color: #94d2bd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-botão a:hover {
+  text-decoration: underline;
+}
+
+.carrossel-section {
+  width: 100%;
+  height: 500px;/* você pode mudar a altura */
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.carrossel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carrossel-imagens {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carrossel-imagens .item {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.carrossel-imagens .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POPUPS */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* CLOSE BTN */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* INPUTS POPUP */
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.popup-content button {
+  width: 100%;
+  background: #1E3A5F;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #162c44;
+}

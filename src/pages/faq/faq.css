@@ -1,0 +1,178 @@
+/* ==========================
+   VARIÁVEIS DE TEMA
+   ========================== */
+:root{
+    --cor-fundo:#f7f9fc;
+    --cor-cartao:#ffffff;
+    --cor-destaque:#0066cc;
+    --cor-texto-suave:#6b7280;
+    --cor-texto-principal:#0f172a;
+
+    --borda-arredondada:12px;
+    --sombra: 0 6px 18px rgba(16,24,40,0.08);
+
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* ========================== */
+body{
+    margin:0;
+    background:var(--cor-fundo);
+    color:var(--cor-texto-principal);
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ====== CABEÇALHO PRINCIPAL ====== */
+.cabecalho-cargorastreio{
+    width:100%;
+    padding:1.25rem 2rem;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    color:#ffffff;
+    font-weight:700;
+    font-size:1rem;
+
+    background: linear-gradient(90deg, #122530 0%, #1e3a5f 40%, #2b6b82 70%);
+    box-shadow:var(--sombra);
+    margin-bottom:30px;
+    min-height:88px;
+}
+
+.cabecalho-cargorastreio .cabecalho-interno{
+    width:100%;
+    max-width:1100px;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+}
+
+.cabecalho-cargorastreio h1{
+    margin:0;
+    font-size:40px;
+}
+
+/* RESPONSIVO */
+@media (max-width:600px){
+    .cabecalho-cargorastreio{
+        padding:0.8rem 1rem;
+        min-height:64px;
+    }
+
+    .cabecalho-cargorastreio h1{
+        font-size:22px;
+    }
+}
+
+/* ====== ÁREA PRINCIPAL ====== */
+.conteiner{
+    max-width:900px;
+    margin:0 auto;
+    padding:20px;
+}
+
+/* ====== HEADER DO FAQ ====== */
+header{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:18px;
+}
+
+.descricao{
+    color:var(--cor-texto-suave);
+    font-size:0.95rem;
+}
+
+/* ====== BARRA DE PESQUISA ====== */
+.controles{
+    display:flex;
+    align-items:center;
+}
+
+.barra-pesquisa{
+    display:flex;
+    gap:8px;
+    background:var(--cor-cartao);
+    padding:8px 14px;
+    border-radius:999px;
+    border:1px solid rgba(0,0,0,0.05);
+    box-shadow:var(--sombra);
+}
+
+.barra-pesquisa input{
+    border:0;
+    outline:0;
+    background:transparent;
+    font-size:0.95rem;
+    width:200px;
+}
+
+/* ====== LISTA DE PERGUNTAS ====== */
+.faq-lista{
+    margin-top:25px;
+    display:grid;
+    gap:14px;
+}
+
+/* ====== ITEM DO FAQ ====== */
+details{
+    background:var(--cor-cartao);
+    padding:16px;
+    border-radius:var(--borda-arredondada);
+    box-shadow:var(--sombra);
+    border:1px solid rgba(0,0,0,0.05);
+    transition:transform .12s ease;
+    cursor:pointer;
+}
+
+details[open]{
+    transform:translateY(-2px);
+}
+
+/* ====== TÍTULO ====== */
+summary{
+    list-style:none;
+    font-size:1rem;
+    font-weight:600;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+/* ====== SETA ====== */
+.icone-seta{
+    font-size:1.2rem;
+    color:var(--cor-destaque);
+    transition:transform .2s ease;
+}
+
+details[open] .icone-seta{
+    transform:rotate(180deg);
+}
+
+/* ====== TEXTO DA RESPOSTA ====== */
+.resposta{
+    margin-top:10px;
+    color:var(--cor-texto-suave);
+    font-size:0.96rem;
+    line-height:1.5;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width:600px){
+    header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .barra-pesquisa input{
+        width:120px;
+    }
+}
