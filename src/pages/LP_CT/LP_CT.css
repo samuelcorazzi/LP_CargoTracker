@@ -45,6 +45,7 @@ header {
   position: relative;
   /* Define que o header pode servir de referência */
   box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
 .header-content {
@@ -68,6 +69,8 @@ header h1 {
   max-width: 440px;
   gap: 1rem;
 }
+
+
 
 .header_sup_esquerdo p {
   color: #ffffff;
@@ -261,10 +264,12 @@ footer {
 
 .carrossel-section {
   width: 100%;
-  height: 500px;/* você pode mudar a altura */
+  height: 500px;
+  /* você pode mudar a altura */
   position: relative;
   overflow: hidden;
   margin-top: 3rem;
+  border-radius: 10px;
 }
 
 .carrossel-container {
@@ -351,20 +356,67 @@ footer {
 /* Botão FAQ flutuante */
 .faq-flutuante {
   position: fixed;
-  bottom: 20px; /* distância do rodapé */
-  right: 20px;  /* distância da borda direita */
+  bottom: 20px;
+  /* distância do rodapé */
+  right: 20px;
+  /* distância da borda direita */
   background-color: #1e3a5f;
   color: #fff;
   padding: 12px 18px;
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 9999; /* garante que fique acima de tudo */
+  z-index: 9999;
+  /* garante que fique acima de tudo */
 }
 
 .faq-flutuante:hover {
   background-color: #16314a;
   transform: translateY(-3px);
+}
+.feature:hover {
+  background-color: #16314a;
+  transform: translateY(-5px);
+
+}
+ /* Popups */
+.popup-content {
+  border-radius: 12px; /* Bordas arredondadas nos popups */
+  padding: 20px;
+}
+
+/* Botões */
+button {
+  border-radius: 8px; /* Bordas arredondadas nos botões */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  border-radius: 6px; /* Bordas arredondadas nos campos de input */
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Features */
+.feature {
+  border-radius: 10px; /* Bordas arredondadas nos cards de funcionalidades */
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+ 
+
+.features{
+  border-radius: 10px;
+}
+
+.introdução{
+  border-radius: 10px;
 }
