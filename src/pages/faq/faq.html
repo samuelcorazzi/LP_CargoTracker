@@ -1,108 +1,56 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>FAQ — Perguntas Frequentes</title>
-    <link rel="stylesheet" href="faq.css">
-    <script src="faq.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Jeju+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="LP_CT.css">
+  <script src="LP-CT.js" defer></script>
+  <title>CargoTracker</title>
 </head>
+
 <body>
 
-    <!-- Cabeçalho Superior -->
-    <header class="cabecalho-cargorastreio">
-        <div class="cabecalho-interno">
-            <h1>Rastreador de Cargas</h1>
-        </div>
-    </header>
+<header>
+  <div class="header-left">
+    <h1>CargoTracker</h1>
+    <p>Ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...</p>
+    <button type="button" data-popup-target="#popupCadastro">Inscreva-se</button>
+  </div>
 
-    <!-- Conteúdo Principal -->
-    <main class="conteiner" id="pagina-perguntas">
+  <nav class="header-nav">
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contatos">Contatos</a>
+    <a href="../faq/faq.html">FAQ</a>
+    <a href="#" data-popup-target="#popupLogin">
+      <img src="img/icons/user-interface.png" alt="Usuário" class="icon-user">
+    </a>
+  </nav>
+</header>
 
-        <!-- Cabeçalho do FAQ -->
-        <header>
-            <div>
-                <h1>Perguntas Frequentes (FAQ)</h1>
-                <p class="descricao">Encontre respostas rápidas para as dúvidas mais comuns sobre o serviço.</p>
-            </div>
+<main>
 
-            <div class="controles" aria-hidden="false">
-                <div class="barra-pesquisa" role="search" aria-label="Pesquisar perguntas">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M21 21l-4.35-4.35" stroke="#9AA4B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="11" cy="11" r="6" stroke="#9AA4B2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+  <!-- POPUP LOGIN -->
+  <div class="popup" id="popupLogin">
+    <div class="popup-content">
+      <button class="close" data-close>&times;</button>
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        <input type="text" name="usuario" placeholder="Usuário" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
 
-                    <input id="pesquisa-faq" type="search" placeholder="Buscar perguntas..." aria-label="Buscar perguntas"/>
-                </div>
-            </div>
-        </header>
-
-        <!-- Lista das Perguntas -->
-        <section id="lista-perguntas" class="faq-lista" aria-label="Perguntas frequentes">
-
-            <details>
-                <summary>
-                    Como faço para criar uma conta?
-                    <span class="icone-seta" aria-hidden="true">▾</span>
-                </summary>
-                <div class="resposta">
-                    Clique em "Registrar" no canto superior direito...
-                </div>
-            </details>
-
-            <details>
-                <summary>
-                    Quais formas de pagamento são aceitas?
-                    <span class="icone-seta">▾</span>
-                </summary>
-                <div class="resposta">
-                    Aceitamos cartões Visa, Mastercard...
-                </div>
-            </details>
-
-            <details>
-                <summary>
-                    Posso alterar meu plano depois de assinar?
-                    <span class="icone-seta">▾</span>
-                </summary>
-                <div class="resposta">
-                    Sim — você pode mudar de plano a qualquer momento...
-                </div>
-            </details>
-
-            <details>
-                <summary>
-                    Como faço para recuperar minha senha?
-                    <span class="icone-seta">▾</span>
-                </summary>
-                <div class="resposta">
-                    Vá para a tela de login e clique em "Esqueci minha senha"...
-                </div>
-            </details>
-
-            <details>
-                <summary>
-                    Onde encontro suporte técnico?
-                    <span class="icone-seta">▾</span>
-                </summary>
-                <div class="resposta">
-                    Nosso suporte está disponível pelo e-mail...
-                </div>
-            </details>
-
-            <details>
-                <summary>
-                    É possível exportar meus dados?
-                    <span class="icone-seta">▾</span>
-                </summary>
-                <div class="resposta">
-                    Sim, você pode exportar seus dados em CSV...
-                </div>
-            </details>
-
-        </section>
-
-    </main>
-</body>
-</html>
+  <!-- POPUP CADASTRO -->
+  <div class="popup" id="popupCadastro">
+    <div class="popup-content">
+      <button class="close" data-close>&times;</button>
+      <h2>Cadastrar</h2>
+      <form action="/cadastrar" method="POST">
+        <input type="text" name="usuario" placeholder="Usuário" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="senha" placehold

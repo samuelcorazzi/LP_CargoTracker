@@ -176,3 +176,24 @@ details[open] .icone-seta{
         width:120px;
     }
 }
+
+/* Botão Voltar para Home */
+.voltar-home {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* fica no canto inferior esquerdo */
+  background-color: #1e3a5f;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+
+.voltar-home:hover {
+  background-color: #16314a;
+  transform: translateY(-3px);
+}
