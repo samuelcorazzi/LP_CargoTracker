@@ -50,3 +50,53 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target === popupCadastro) popupCadastro.style.display = "none";
     });
 });
+
+// --- CADASTRAR USUÁRIO ---
+document.querySelector("#popupCadastro form").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const usuario = e.target.usuario.value;
+  const email = e.target.email.value;
+  const senha = e.target.senha.value;
+
+  const dados = {
+    usuario,
+    email,
+    senha
+  };
+
+  // salva no LocalStorage
+  localStorage.setItem("usuarioCadastro", JSON.stringify(dados));
+
+  alert("Usuário cadastrado com sucesso!");
+  e.target.reset();
+
+  // fecha popup de cadastro
+  document.getElementById("popupCadastro").style.display = "none";
+
+  // abre popup de login automaticamente
+  abrirLogin();
+});
+
+
+//  login usuario
+document.querySelector("#popupLogin form").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const usuario = e.target.usuario.value;
+  const senha = e.target.senha.value;
+
+  // pega os dados cadastrados
+  const dadosSalvos = JSON.parse(localStorage.getItem("usuarioCadastro"));
+
+  if (!dadosSalvos) {
+    alert("Nenhum usuário cadastrado!");
+    return;
+  }
+
+  if (usuario === dadosSalvos.usuario && senha === dadosSalvos.senha) {
+    window.location.href = ".system.html"; // troque se quiser
+  } else {
+    alert("Usuário ou senha incorretos!");
+  }
+});

@@ -7,6 +7,7 @@
   font-family: 'Jeju Gothic', sans-serif;
 }
 
+/* Ícone do usuário */
 .icon-user {
   width: 32px;
   /* tamanho da largura */
@@ -23,12 +24,10 @@ body {
   /* Define o espaço vertical entre as linhas de texto */
 }
 
-/* cabeçalho do cod */
+/* Header */
 header {
   background-image: url("img/pexels-tomfisk-3856440.jpg");
-  /* imagem de fundo do header */
   background-size: cover;
-  /* usado para cobrir todo o espaço do header */
   background-position: center;
   background-repeat: no-repeat;
   /* impede que a img se repita */
@@ -37,15 +36,12 @@ header {
   padding-top: 1rem;
   display: flex;
   justify-content: space-between;
-  /* distriu os elementos horizontalmente e deixa um espaço entre eles */
+  /* distriu os elementos */
   align-items: flex-start;
-  /* alinha os itens */
   flex-wrap: wrap;
-  /* quebra de linha */
   position: relative;
-  /* Define que o header pode servir de referência */
+  /* referência */
   box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
 }
 
 .header-content {
@@ -62,6 +58,7 @@ header h1 {
   color: #1e3a5f;
 }
 
+/* Header sup esquerdo */
 .header_sup_esquerdo {
   display: flex;
   flex-direction: column;
@@ -70,14 +67,13 @@ header h1 {
   gap: 1rem;
 }
 
-
-
 .header_sup_esquerdo p {
   color: #ffffff;
   font-size: 1rem;
   margin-top: 2.5rem;
 }
 
+/* Botão header */
 header button {
   background-color: #1e3a5f;
   color: #ffffff;
@@ -93,6 +89,7 @@ header button:hover {
   background-color: #16314a;
 }
 
+/* Links Header */
 #links_header {
   display: flex;
   gap: 1.5rem;
@@ -111,11 +108,13 @@ header button:hover {
   color: #1e3a5f;
 }
 
+/* Main */
 main {
   padding: 2rem 1rem;
   margin: auto;
 }
 
+/* Introdução */
 .introdução {
   display: flex;
   justify-content: space-between;
@@ -126,6 +125,23 @@ main {
   flex-wrap: wrap;
   margin-bottom: 4rem;
   border-bottom: 4px solid #ccc;
+  border-radius: 10px;
+}
+
+.introdução h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #005f73;
+  margin: 1rem;
+  margin-top: 2rem;
+}
+
+.intro_conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .intro_texto {
@@ -133,23 +149,9 @@ main {
   min-width: 300px;
 }
 
-.introdução h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #005f73;
-  margin-bottom: 2rem;
-}
-
-.intro_conteudo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .intro_texto p {
-  font-size: 1.1rem;
+  text-align: center;
+  font-size: 1.3rem;
   line-height: 1.8;
   color: #333;
 }
@@ -163,17 +165,19 @@ main {
 }
 
 .intro_imagem img {
-  max-width: 100%;
   height: auto;
+  max-width: 90%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Features */
 .features {
   background-color: #1E3A5F;
   width: 100%;
   padding: 4rem 2rem;
   text-align: center;
+  border-radius: 10px;
 }
 
 .features h2 {
@@ -187,6 +191,17 @@ main {
   width: 250px;
   margin: 0 1rem;
   vertical-align: top;
+  border-radius: 10px;
+  /* Bordas arredondadas nos cards */
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.feature:hover {
+  background-color: #16314a;
+  transform: translateY(-5px);
 }
 
 .icone {
@@ -215,6 +230,140 @@ main {
   color: #e0fbfc;
 }
 
+/* Carrossel */
+.carrossel-section {
+  width: 100%;
+  height: 500px;
+  /* você pode mudar a altura */
+  position: relative;
+  overflow: hidden;
+  margin-top: 3rem;
+  border-radius: 10px;
+}
+
+.carrossel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carrossel-imagens {
+  display: flex;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.carrossel-imagens .item {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.carrossel-imagens .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Popups*/
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  /* Bordas arredondadas */
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* input popups */
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.popup-content button {
+  width: 100%;
+  background: #1E3A5F;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #162c44;
+}
+
+/* Botao faq */
+.faq-flutuante {
+  position: fixed;
+  bottom: 20px;
+  /* distância do rodapé */
+  right: 20px;
+  /* distância da borda direita */
+  background-color: #1e3a5f;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 9999;
+  /* acima de tudo */
+}
+
+.faq-flutuante:hover {
+  background-color: #16314a;
+  transform: translateY(-3px);
+}
+
+/* Botão */
+button {
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* inputs gerais */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  border-radius: 6px;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Footer */
 footer {
   background-color: #001f2d;
   color: #fefae0;
@@ -260,163 +409,4 @@ footer {
 
 .footer-botão a:hover {
   text-decoration: underline;
-}
-
-.carrossel-section {
-  width: 100%;
-  height: 500px;
-  /* você pode mudar a altura */
-  position: relative;
-  overflow: hidden;
-  margin-top: 3rem;
-  border-radius: 10px;
-}
-
-.carrossel-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.carrossel-imagens {
-  display: flex;
-  height: 100%;
-  transition: transform 1s ease-in-out;
-}
-
-.carrossel-imagens .item {
-  flex: 0 0 100%;
-  height: 100%;
-}
-
-.carrossel-imagens .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* POPUPS */
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  width: 90%;
-  max-width: 400px;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  position: relative;
-}
-
-/* CLOSE BTN */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
-/* INPUTS POPUP */
-.popup-content input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #999;
-  border-radius: 5px;
-}
-
-.popup-content button {
-  width: 100%;
-  background: #1E3A5F;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.popup-content button:hover {
-  background: #162c44;
-}
-
-/* Botão FAQ flutuante */
-.faq-flutuante {
-  position: fixed;
-  bottom: 20px;
-  /* distância do rodapé */
-  right: 20px;
-  /* distância da borda direita */
-  background-color: #1e3a5f;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 50px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 9999;
-  /* garante que fique acima de tudo */
-}
-
-.faq-flutuante:hover {
-  background-color: #16314a;
-  transform: translateY(-3px);
-}
-.feature:hover {
-  background-color: #16314a;
-  transform: translateY(-5px);
-
-}
- /* Popups */
-.popup-content {
-  border-radius: 12px; /* Bordas arredondadas nos popups */
-  padding: 20px;
-}
-
-/* Botões */
-button {
-  border-radius: 8px; /* Bordas arredondadas nos botões */
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-/* Inputs */
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-  border-radius: 6px; /* Bordas arredondadas nos campos de input */
-  padding: 8px;
-  border: 1px solid #ccc;
-}
-
-/* Features */
-.feature {
-  border-radius: 10px; /* Bordas arredondadas nos cards de funcionalidades */
-  padding: 15px;
-  border: 1px solid #ddd;
-  text-align: center;
-}
-
- 
-
-.features{
-  border-radius: 10px;
-}
-
-.introdução{
-  border-radius: 10px;
 }

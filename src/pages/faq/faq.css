@@ -1,6 +1,4 @@
-/* ==========================
-   VARIÁVEIS DE TEMA
-   ========================== */
+/* Variaveis tema */
 :root{
     --cor-fundo:#f7f9fc;
     --cor-cartao:#ffffff;
@@ -14,7 +12,6 @@
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
-/* ========================== */
 body{
     margin:0;
     background:var(--cor-fundo);
@@ -22,7 +19,7 @@ body{
     -webkit-font-smoothing:antialiased;
 }
 
-/* ====== CABEÇALHO PRINCIPAL ====== */
+/* cabeçalho principal */
 .cabecalho-cargorastreio{
     width:100%;
     padding:1.25rem 2rem;
@@ -52,7 +49,7 @@ body{
     font-size:40px;
 }
 
-/* RESPONSIVO */
+/* Responsivo */
 @media (max-width:600px){
     .cabecalho-cargorastreio{
         padding:0.8rem 1rem;
@@ -64,14 +61,14 @@ body{
     }
 }
 
-/* ====== ÁREA PRINCIPAL ====== */
+/* container principal */
 .conteiner{
     max-width:900px;
     margin:0 auto;
     padding:20px;
 }
 
-/* ====== HEADER DO FAQ ====== */
+/* Header do faq */
 header{
     display:flex;
     align-items:flex-start;
@@ -85,7 +82,7 @@ header{
     font-size:0.95rem;
 }
 
-/* ====== BARRA DE PESQUISA ====== */
+/* Barra de pesquisa */
 .controles{
     display:flex;
     align-items:center;
@@ -109,14 +106,14 @@ header{
     width:200px;
 }
 
-/* ====== LISTA DE PERGUNTAS ====== */
+/* Lista de perguntas */
 .faq-lista{
     margin-top:25px;
     display:grid;
     gap:14px;
 }
 
-/* ====== ITEM DO FAQ ====== */
+/* Item do faq */
 details{
     background:var(--cor-cartao);
     padding:16px;
@@ -131,7 +128,7 @@ details[open]{
     transform:translateY(-2px);
 }
 
-/* ====== TÍTULO ====== */
+/* Titulo */
 summary{
     list-style:none;
     font-size:1rem;
@@ -146,7 +143,7 @@ summary::-webkit-details-marker{
     display:none;
 }
 
-/* ====== SETA ====== */
+/* Seta */
 .icone-seta{
     font-size:1.2rem;
     color:var(--cor-destaque);
@@ -157,7 +154,7 @@ details[open] .icone-seta{
     transform:rotate(180deg);
 }
 
-/* ====== TEXTO DA RESPOSTA ====== */
+/* texto da resposta */
 .resposta{
     margin-top:10px;
     color:var(--cor-texto-suave);
@@ -165,7 +162,7 @@ details[open] .icone-seta{
     line-height:1.5;
 }
 
-/* ====== RESPONSIVO ====== */
+/* Responsivo */
 @media (max-width:600px){
     header{
         flex-direction:column;
