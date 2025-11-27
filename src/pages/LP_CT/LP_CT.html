@@ -1,3 +1,4 @@
+<!-- Updated HTML with visual effect hooks -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,36 +12,31 @@
 </head>
 
 <body>
-
-  <header>
-    <div class="header_sup_esquerdo">
+  <header class="fade-in">
+    <div class="header_sup_esquerdo slide-left">
       <h1>CargoTracker</h1>
       <p>
         O CargoTracker é uma plataforma inovadora para o rastreamento de cargas marítimas em tempo real.
         Nossa missão é oferecer transparência, segurança e eficiência na gestão logística,
         permitindo que empresas e clientes acompanhem suas mercadorias de forma simples e confiável.
       </p>
-      <button type="button" id="openCadastro">Inscreva-se</button>
+      <button type="button" id="openCadastro" class="btn-anim">Inscreva-se</button>
     </div>
 
-    <div id="links_header">
+    <div id="links_header" class="fade-in-delay">
       <a href="#home">Home</a>
       <a href="#introducao">Sobre</a>
       <a href="#contatos">Contatos</a>
 
-
-      <!-- abre popup de login -->
-      <a href="#" id="openLogin">
+      <a href="#" id="openLogin" class="icon-wrapper">
         <img src="img/icons/user-interface.png" alt="Imagem clicável" class="icon-user">
       </a>
     </div>
   </header>
 
   <main>
-
-    <!-- popup login -->
     <div class="popup" id="popupLogin">
-      <div class="popup-content">
+      <div class="popup-content scale-in">
         <span class="close" data-close>&times;</span>
         <h2>Login</h2>
 
@@ -56,13 +52,12 @@
       </div>
     </div>
 
-    <!-- popup cadastro -->
     <div class="popup" id="popupCadastro">
-      <div class="popup-content">
+      <div class="popup-content scale-in">
         <span class="close" data-close>&times;</span>
         <h2>Cadastrar</h2>
 
-        <form  id="formCadastro" method="POST">
+        <form id="formCadastro" method="POST">
           <label>Usuário:</label>
           <input type="text" name="usuario" required>
 
@@ -77,51 +72,46 @@
       </div>
     </div>
 
-    <!-- secoes -->
-    <section id="introdução" class="introdução">
-      <h2>Sobre o CargoTracker</h2>
+    <section id="introducao" class="introdução fade-in">
       <div class="intro_conteudo">
-        <div class="intro_texto">
-          <p>
-          <p>
+        <div class="intro_texto slide-up">
+          <h2>Sobre o CargoTracker</h2>
           <p>
             O comércio marítimo é responsável por mais de 80% do transporte mundial de mercadorias.
             Pensando nisso, o CargoTracker foi desenvolvido para facilitar o monitoramento de cargas,
             oferecendo informações atualizadas sobre localização, status e previsão de entrega.
             Com uma interface intuitiva e recursos avançados, você tem controle total sobre sua operação logística.
           </p>
-          </p>
         </div>
-        <div class="intro_imagem">
+        <div class="intro_imagem zoom-in">
           <img src="img/pexels-dibert-1117210.jpg">
         </div>
       </div>
     </section>
 
-    <section class="features">
+    <section class="features fade-in-delay">
       <h2>Principais Funcionalidades</h2>
 
-      <div class="feature">
+      <div class="feature hover-boost">
         <div class="icone">📶</div>
         <h3>Tracking em tempo real</h3>
         <p>Acompanhe a localização exata da sua carga em qualquer parte do mundo.</p>
       </div>
 
-      <div class="feature">
+      <div class="feature hover-boost">
         <div class="icone">⚓</div>
         <h3>Gestão portuária</h3>
         <p>Informações sobre embarque, desembarque e movimentação nos principais portos.</p>
       </div>
 
-      <div class="feature">
+      <div class="feature hover-boost">
         <div class="icone">📄</div>
         <h3>Documentação digital</h3>
         <p>Centralize contratos, notas fiscais e certificados em um só lugar.</p>
       </div>
-
     </section>
 
-    <section class="carrossel-section">
+    <section class="carrossel-section fade-in">
       <div class="carrossel-container">
         <div class="carrossel-imagens">
           <div class="item"><img src="img/pexels-tomfisk-1427107.jpg"></div>
@@ -130,10 +120,9 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
+  <footer class="fade-in">
     <div class="footer_container">
       <div class="footer_contatos">
         <h3>ENTRE EM CONTATO</h3>
@@ -142,14 +131,13 @@
       </div>
     </div>
 
-    <div class="footer-botão">
+    <div class="footer-botão slide-up">
       <a href="">Política de privacidade</a>
       <a href="">Termos de uso</a>
     </div>
   </footer>
 
-  <a href="../faq/faq.html" class="faq-flutuante" target="_blank">FAQ</a>
-
+  <a href="../faq/faq.html" class="faq-flutuante hover-boost" target="_blank">FAQ</a>
 </body>
 
 </html>
