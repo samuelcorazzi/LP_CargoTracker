@@ -95,7 +95,7 @@ document.querySelector("#popupLogin form").addEventListener("submit", (e) => {
   }
 
   if (usuario === dadosSalvos.usuario && senha === dadosSalvos.senha) {
-    window.location.href = ".system.html"; // troque se quiser
+    location.href = "/src/pages/acesso/acesso.html"; // troque se quiser
   } else {
     alert("Usuário ou senha incorretos!");
   }
