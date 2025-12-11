@@ -1,3 +1,13 @@
+/* PALETA OFICIAL */
+:root {
+  --azul-escuro: #1E3A5F;
+  --azul-claro: #3B82B3;
+  --azul-ceu: #A3D2F4;
+  --verde: #5EC5A6;
+  --bege: #fefae0;
+  --cinza-gelo: #F3F6F9;
+}
+
 /* =========================================================
    RESET + BASE
 ========================================================= */
@@ -8,12 +18,8 @@
   font-family: 'Jeju Gothic', sans-serif;
 }
 
-*, p, h1, h2, h3, h4, h5, h6, a, span, li {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-
 body {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   color: #333;
   line-height: 1.6;
 }
@@ -38,6 +44,7 @@ body {
 /* =========================================================
    HEADER
 ========================================================= */
+
 header {
   background-image: url("img/pexels-tomfisk-3856440.jpg");
   background-size: cover;
@@ -70,7 +77,8 @@ header:hover {
 
 header h1 {
   font-size: 60px;
-  color: #1e3a5f;
+  color: var(--azul-escuro); /* substituído: #1e3a5f */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* SUP ESQUERDO */
@@ -87,11 +95,12 @@ header h1 {
   color: #ffffff;
   font-size: 1rem;
   margin-top: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* BOTÃO HEADER */
 header button {
-  background-color: #1e3a5f;
+  background-color: var(--azul-escuro); /* substituído: #1e3a5f */
   color: #ffffff;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -99,6 +108,7 @@ header button {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.4s ease, transform .3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 header button:hover {
@@ -120,11 +130,13 @@ header button:hover {
   font-weight: bold;
   font-size: 1.5rem;
   transition: color .3s ease, transform .2s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 #links_header a:hover {
-  color: #1e3a5f;
+  color: var(--azul-escuro); /* substituído: #1e3a5f */
   transform: translateY(-3px);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* =========================================================
@@ -139,70 +151,79 @@ main {
    INTRODUÇÃO
 ========================================================= */
 
-.introdução {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fefae0;
-  padding: 4rem 3rem;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-  border-bottom: 4px solid #ccc;
-  border-radius: 10px;
-  animation: fadeIn 1s ease;
-}
+/* SEÇÃO ------------------------------------------------------*/
 
-.introdução h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #005f73;
-  margin-top: 2rem;
+.introducao {
+  display: flex;
+  justify-content: center;
+  background-color: var(--cinza-gelo);
+  padding: 4rem 3rem;
+  border-radius: 12px;
+  margin-bottom: 4rem;
 }
 
 .intro_conteudo {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  width: 100%;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
-.intro_conteudo h2 {
-  width: 100%;
-  text-align: center;
-  font-size: 2.5rem;
-  color: #005f73;
-  margin-bottom: 2rem;
-}
+/* TEXTO ------------------------------------------------------*/
 
 .intro_texto {
   flex: 1;
-  min-width: 300px;
+  min-width: 340px;
+}
+
+.intro_texto h2 {
+  font-size: 2.4rem;
+  color: var(--azul-escuro);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.4rem;
+}
+
+.barra {
+  width: 6px;
+  height: 32px;
+  background: var(--verde);
+  border-radius: 6px;
 }
 
 .intro_texto p {
-  text-align: center;
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: #333;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--azul-escuro);
+  text-align: left;
+  margin-top: 1rem;
 }
+
+.destaque {
+  color: var(--azul-claro);
+  font-weight: 600;
+}
+
+/* IMAGEM ------------------------------------------------------*/
 
 .intro_imagem {
   flex: 1;
-  min-width: 300px;
+  min-width: 340px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .intro_imagem img {
-  max-width: 90%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
+
 
 /* =========================================================
    FEATURES / CARDS
@@ -237,7 +258,7 @@ main {
 .feature:hover {
   background-color: #16314a;
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
 .icone {
@@ -459,11 +480,25 @@ footer {
 ========================================================= */
 
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-25px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
