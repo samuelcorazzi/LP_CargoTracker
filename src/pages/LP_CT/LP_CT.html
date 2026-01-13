@@ -11,6 +11,23 @@
   <title>CargoTracker</title>
 </head>
 
+<!-- MODAL CADASTRO DE LEADS -->
+<div id="modalCadastro" class="modal-overlay">
+  <div class="modal-cadastro">
+    <button class="modal-close" id="closeCadastro">&times;</button>
+
+    <h2>Participe da prévia do CargoTracker</h2>
+    <p>Cadastre-se para receber novidades e acesso antecipado.</p>
+
+    <form id="leadForm">
+      <input type="text" placeholder="Nome completo" required>
+      <input type="email" placeholder="E-mail corporativo" required>
+      <input type="tel" placeholder="WhatsApp (opcional)">
+      <button type="submit">Quero participar</button>
+    </form>
+  </div>
+</div>
+
 <body>
   <header class="fade-in">
     <div class="header_sup_esquerdo slide-left">
@@ -36,43 +53,6 @@
   </header>
 
   <main>
-    <div class="popup" id="popupLogin">
-      <div class="popup-content scale-in">
-        <span class="close" data-close>&times;</span>
-        <h2>Login</h2>
-
-        <form id="formLogin" method="POST">
-          <label>Usuário:</label>
-          <input type="text" name="usuario" required>
-
-          <label>Senha:</label>
-          <input type="password" name="senha" required>
-
-          <button type="submit">Entrar</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="popup" id="popupCadastro">
-      <div class="popup-content scale-in">
-        <span class="close" data-close>&times;</span>
-        <h2>Cadastrar</h2>
-
-        <form id="formCadastro" method="POST">
-          <label>Usuário:</label>
-          <input type="text" name="usuario" required>
-
-          <label>Email:</label>
-          <input type="email" name="email" required>
-
-          <label>Senha:</label>
-          <input type="password" name="senha" required>
-
-          <button type="submit">Criar conta</button>
-        </form>
-      </div>
-    </div>
-
     <section id="introducao" class="introducao fade-in">
       <div class="intro_conteudo">
 
