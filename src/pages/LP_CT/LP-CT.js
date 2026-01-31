@@ -39,3 +39,27 @@ document.getElementById("leadForm").addEventListener("submit", (e) => {
   alert("Cadastro enviado com sucesso");
   modal.classList.remove("ativo");
 });
+
+document.querySelectorAll('#links_header a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const id = this.getAttribute('href');
+
+    if (id === '#') return;
+
+    e.preventDefault();
+
+    const target = document.querySelector(id);
+    if (!target) return;
+
+    const targetPosition =
+      target.getBoundingClientRect().top + window.pageYOffset;
+
+    const offset =
+      (window.innerHeight / 2) - (target.offsetHeight / 2);
+
+    window.scrollTo({
+      top: targetPosition - offset,
+      behavior: 'smooth'
+    });
+  });
+});
